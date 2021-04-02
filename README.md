@@ -1,7 +1,7 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Hosted Site
-Visit the live site at https://charter-rewards-2oxeffx0x-chancehalo.vercel.app/
+Visit the live site at https://charter-rewards-chancehalo.vercel.app
 
 ## Prompt
 A retailer offers a rewards program to its customers, awarding points based on each recorded purchase.
