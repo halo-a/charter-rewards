@@ -19,7 +19,9 @@ export default function Customers() {
         <link key="icon-favicon" rel="icon" href="/favicon.ico" />
       </Head>
       <PageHeader />
-      <CustomersPointsTable />
+      <main>
+        <CustomersPointsTable />
+      </main>
     </div>
   );
 }

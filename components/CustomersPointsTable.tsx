@@ -11,6 +11,23 @@ import Transaction from "../types/Transaction";
 import useTransactions from "../hooks/useTransactions";
 import Customer from "../types/Customer";
 
+const useStyles = makeStyles((theme: Theme) =>
+  createStyles({
+    root: { margin: "auto", width: "99vw" },
+    tableContainer: {
+      width: "75%",
+      margin: "auto",
+    },
+    tableHead: {
+      "& th": { fontWeight: `${theme.typography.fontWeightBold} !important` },
+    },
+    bold: { fontWeight: theme.typography.fontWeightBold },
+    totalRow: {
+      backgroundColor: blue[100],
+    },
+  })
+);
+
 function getCustomerDataFromTransactionData(transactions: Transaction[]) {
   return transactions.reduce((acc, curr) => {
     const found = acc.find((a) => a.customerName === curr.customerName);
@@ -39,23 +56,6 @@ function getCustomerDataFromTransactionData(transactions: Transaction[]) {
     return acc;
   }, []);
 }
-
-const useStyles = makeStyles((theme: Theme) =>
-  createStyles({
-    root: { margin: "auto", width: "99vw" },
-    tableContainer: {
-      width: "75%",
-      margin: "auto",
-    },
-    tableHead: {
-      "& th": { fontWeight: `${theme.typography.fontWeightBold} !important` },
-    },
-    bold: { fontWeight: theme.typography.fontWeightBold },
-    totalRow: {
-      backgroundColor: blue[100],
-    },
-  })
-);
 
 export default function Customers() {
   const classes = useStyles();
